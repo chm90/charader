@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ögonbindelritning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f0f0f0;
+    }
+    .container {
+        text-align: center;
+    }
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+    #word {
+        font-size: 2em; 
+    }
+    </style>
+<script>
+window.onload = function() {
+    var words = [
+        "Katt",
+        "Solnedgång",
+        "Träd",
+        "Cykel",
+        "Bok",
+        "Eiffeltornet",
+        "Gitarr",
+        "Elefant",
+        "Pizza",
+        "Fotbollsplan",
+        "Slott",
+        "Fjäril",
+        "Måne och stjärnor",
+        "Bil",
+        "Fisk",
+        "Glasögon",
+        "Segelbåt",
+        "Klocka",
+        "Äpple",
+        "Blomma"
+    ];
+    document.getElementById("next").addEventListener("click", function() {
+        var word = words[Math.floor(Math.random() * words.length)];
+        document.getElementById("word").innerText = word;
+    });
+}
+</script>
+</head>
+<body>
+<div class="container">
+    <div id="word"></div>
+    <button id="next">Nästa objekt att rita</button>
+</div>
+</body>
+</html>
